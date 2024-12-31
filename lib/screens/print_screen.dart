@@ -1,16 +1,14 @@
-import 'package:blinkit_clone/widgets/homescreen/buildContainer.dart';
-import 'package:blinkit_clone/widgets/homescreen/container2.dart';
-import 'package:blinkit_clone/widgets/homescreen/container3.dart';
+import 'package:blinkit_clone/domain/constants/appcolors.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class PrintScreen extends StatefulWidget {
+  const PrintScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<PrintScreen> createState() => _PrintScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _PrintScreenState extends State<PrintScreen> {
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
@@ -18,13 +16,11 @@ class _HomeScreenState extends State<HomeScreen> {
     return SafeArea(
       child: Scaffold(
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              height: screenHeight * 0.43,
+              height: screenHeight * 0.25,
               width: screenWidth * double.infinity,
-              color: Color(0xffEC0505),
+              color: AppColors.Scaffoldbackground,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -35,10 +31,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
+                        SizedBox(
+                          height: 10,
+                        ),
                         Text(
                           "Blinkit in",
                           style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.w500),
+                              color: Colors.black, fontWeight: FontWeight.w500),
+                        ),
+                        SizedBox(
+                          height: 10,
                         ),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               style: TextStyle(
                                   fontSize: 20,
                                   fontWeight: FontWeight.w700,
-                                  color: Colors.white),
+                                  color: Colors.black),
                             ),
                             Spacer(),
                             Padding(
@@ -73,15 +75,15 @@ class _HomeScreenState extends State<HomeScreen> {
                                 "Home",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.white),
+                                    color: Colors.black),
                               ),
                               SizedBox(
                                 width: 4,
                               ),
                               Text(
                                 "- Neeraj bhatt Manduwala Dehradun ",
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 12),
+                                style:
+                                    TextStyle(color: Colors.black, fontSize: 12),
                               ),
                             ],
                           ),
@@ -127,109 +129,70 @@ class _HomeScreenState extends State<HomeScreen> {
                             ],
                           ),
                         ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.zero,
-                    child: Container(
-                      height: 2,
-                      width: double.infinity,
-                      color: Colors.white,
-                    ),
-                  ),
-                  Row(
-                    children: [
-                      Image.asset("lib/assets/images/image 60.png"),
-                      Text(
-                        "MEGA NEW YEAR SALE",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 20),
-                      ),
-                      Image.asset("lib/assets/images/image 61.png"),
-                    ],
-                  ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        CustomContainer(
-                            text: "Lights, Diyas & Candles",
-                            imagePath: "lib/assets/images/image 50.png"),
-                        SizedBox(
-                          width: 4,
-                        ),
-                        CustomContainer(
-                            text: "New Year Gifts",
-                            imagePath: "lib/assets/images/image 51.png"),
-                        SizedBox(
-                          width: 4,
-                        ),
-                        CustomContainer(
-                            text: "Appliances & Gadgets",
-                            imagePath: "lib/assets/images/image 52.png"),
-                        SizedBox(
-                          width: 4,
-                        ),
-                        CustomContainer(
-                            text: "Home & Living",
-                            imagePath: "lib/assets/images/image 53.png"),
-                        SizedBox(
-                          width: 4,
-                        ),
                       ],
                     ),
                   ),
                 ],
               ),
             ),
-            SizedBox(
-              height: 5,
-            ),
-            Row(
-              children: [
-                Container2(
-                  imagePath: 'lib/assets/images/image 54.png',
-                  title: 'Wooden Glass\n Wooden Lid Candle',
-                  subTitle: '16 MIN',
-                ),
-                Container2(
-                  imagePath: 'lib/assets/images/image 57.png',
-                  title: 'Royal gulab Jamun\n by Bikano',
-                  subTitle: '16 MIN',
-                ),
-                Container2(
-                  imagePath: 'lib/assets/images/image 63.png',
-                  title: 'Bikaji Bhujia',
-                  subTitle: '16 MIN',
-                ),
-              ],
+            SizedBox(height: 20,),
+            Text(
+              " Print Store ",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 32),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Text(
-                "Grocery & Kitchen ",
-                style: TextStyle(fontWeight: FontWeight.w700),
-              ),
+              child: Text("Blinkit ensures secure prints at every staage ",style: TextStyle(color: Color(0xff9C9C9C),fontSize: 14),),
             ),
-            SizedBox(
-              height: 5,
-            ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  Container3(title: "Vegetables & \n Fruits",imagePath: "lib/assets/images/image 46.png",),
-                  Container3(title: "Atta,Dal & \n Rice",imagePath: "lib/assets/images/image 46 (1).png",),
-                  Container3(title: "Vegetables & \n Masala",imagePath: "lib/assets/images/image 46 (2).png",),
-                  Container3(title: "Dairy Bread & \n Milk",imagePath: "lib/assets/images/image 46 (3).png",),
-                ],
+            SizedBox(height: 20,),
+            Container(
+              height: screenHeight*0.22,
+              width: screenWidth*0.43,
+              decoration: BoxDecoration(
+                color: Color(0xffFBF0CE),
+                borderRadius: BorderRadius.circular(10)
+                    
               ),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment:CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(height: 10,),
+                              Text("Documents",style:TextStyle(color: Colors.black,fontSize: 14, fontWeight: FontWeight.bold),),
+                              SizedBox(height: 5,),
+                              Text("Price starting at rs 3/page",style:TextStyle(color: Color(0xff9C9C9C),fontSize: 14, fontWeight: FontWeight.bold),),
+                              SizedBox(height: 5,),
+                              Text("Paper quality : 70 GSM",style:TextStyle(color: Color(0xff9C9C9C),fontSize: 14, fontWeight: FontWeight.bold),),
+                              SizedBox(height: 5,),
+                              Text("Single side Prints ",style:TextStyle(color: Color(0xff9C9C9C),fontSize: 14, fontWeight: FontWeight.bold),)
+                            ,SizedBox(height: 10,),  Container(
+                                height: 30,
+                                width: 98,
+                                decoration: BoxDecoration(
+                                  color: Color(0xff27AF34),
+                                  borderRadius: BorderRadius.circular(10)
+                                ),
+                                child: Center(child: Text("Upload Files",style: TextStyle(fontWeight: FontWeight.w700,fontSize: 10,color: Colors.white),)),
+
+                              )
+                            ],
+                          ),
+                        ),
+                        SizedBox(width: 30,),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 30),
+                          child: Image.asset("lib/assets/images/image 62.png"),
+                        )
+                      ],
+                    )
+                  ],
+                )
             )
           ],
         ),

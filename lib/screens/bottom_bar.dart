@@ -1,4 +1,7 @@
+import 'package:blinkit_clone/screens/cart_screen.dart';
+import 'package:blinkit_clone/screens/category_screen.dart';
 import 'package:blinkit_clone/screens/home_screen.dart';
+import 'package:blinkit_clone/screens/print_screen.dart';
 import 'package:flutter/material.dart';
 
 class BottomBar extends StatefulWidget {
@@ -9,7 +12,7 @@ class BottomBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomBar> {
-  List<Widget> list = [HomeScreen(), Text("hii"), Text("Hello"), Text("hi ")];
+  List<Widget> list = [HomeScreen(), CartScreen(), CategoryScreen(), PrintScreen()];
 
   int _selectedIndex = 0;
 

@@ -1,45 +1,46 @@
-import 'package:blinkit_clone/widgets/homescreen/buildContainer.dart';
-import 'package:blinkit_clone/widgets/homescreen/container2.dart';
+import 'package:blinkit_clone/domain/constants/appcolors.dart';
 import 'package:blinkit_clone/widgets/homescreen/container3.dart';
 import 'package:flutter/material.dart';
-
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class CategoryScreen extends StatefulWidget {
+  const CategoryScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<CategoryScreen> createState() => _CategoryScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _CategoryScreenState extends State<CategoryScreen> {
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
+      
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              height: screenHeight * 0.43,
+              height: screenHeight * 0.25,
               width: screenWidth * double.infinity,
-              color: Color(0xffEC0505),
+              color: AppColors.Scaffoldbackground,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
+                        SizedBox(height: 10,),
                         Text(
                           "Blinkit in",
                           style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.w500),
+                              color: Colors.black, fontWeight: FontWeight.w500),
                         ),
+                        SizedBox(height: 10,),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -48,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               style: TextStyle(
                                   fontSize: 20,
                                   fontWeight: FontWeight.w700,
-                                  color: Colors.white),
+                                  color: Colors.black),
                             ),
                             Spacer(),
                             Padding(
@@ -60,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     color: Color(0xff000000),
                                     borderRadius: BorderRadius.circular(20)),
                                 child:
-                                    Image.asset("lib/assets/images/user 2.png"),
+                                Image.asset("lib/assets/images/user 2.png"),
                               ),
                             )
                           ],
@@ -73,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 "Home",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.white),
+                                    color: Colors.black),
                               ),
                               SizedBox(
                                 width: 4,
@@ -81,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               Text(
                                 "- Neeraj bhatt Manduwala Dehradun ",
                                 style: TextStyle(
-                                    color: Colors.white, fontSize: 12),
+                                    color: Colors.black, fontSize: 12),
                               ),
                             ],
                           ),
@@ -127,88 +128,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             ],
                           ),
                         ),
-                        SizedBox(
-                          height: 10,
-                        ),
+      
                       ],
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.zero,
-                    child: Container(
-                      height: 2,
-                      width: double.infinity,
-                      color: Colors.white,
-                    ),
-                  ),
-                  Row(
-                    children: [
-                      Image.asset("lib/assets/images/image 60.png"),
-                      Text(
-                        "MEGA NEW YEAR SALE",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 20),
-                      ),
-                      Image.asset("lib/assets/images/image 61.png"),
-                    ],
-                  ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        CustomContainer(
-                            text: "Lights, Diyas & Candles",
-                            imagePath: "lib/assets/images/image 50.png"),
-                        SizedBox(
-                          width: 4,
-                        ),
-                        CustomContainer(
-                            text: "New Year Gifts",
-                            imagePath: "lib/assets/images/image 51.png"),
-                        SizedBox(
-                          width: 4,
-                        ),
-                        CustomContainer(
-                            text: "Appliances & Gadgets",
-                            imagePath: "lib/assets/images/image 52.png"),
-                        SizedBox(
-                          width: 4,
-                        ),
-                        CustomContainer(
-                            text: "Home & Living",
-                            imagePath: "lib/assets/images/image 53.png"),
-                        SizedBox(
-                          width: 4,
-                        ),
-                      ],
-                    ),
-                  ),
+      
                 ],
               ),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Row(
-              children: [
-                Container2(
-                  imagePath: 'lib/assets/images/image 54.png',
-                  title: 'Wooden Glass\n Wooden Lid Candle',
-                  subTitle: '16 MIN',
-                ),
-                Container2(
-                  imagePath: 'lib/assets/images/image 57.png',
-                  title: 'Royal gulab Jamun\n by Bikano',
-                  subTitle: '16 MIN',
-                ),
-                Container2(
-                  imagePath: 'lib/assets/images/image 63.png',
-                  title: 'Bikaji Bhujia',
-                  subTitle: '16 MIN',
-                ),
-              ],
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -230,10 +156,46 @@ class _HomeScreenState extends State<HomeScreen> {
                   Container3(title: "Dairy Bread & \n Milk",imagePath: "lib/assets/images/image 46 (3).png",),
                 ],
               ),
-            )
+            ),
+
+
+
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Container3(title: "Dry Furits & \n Careals",imagePath: "lib/assets/images/image 21.png",),
+                  Container3(title: "Kitchen & \n Appliances",imagePath: "lib/assets/images/image 22.png",),
+                  Container3(title: "Tea & \n Coffes",imagePath: "lib/assets/images/image 23.png",),
+                  Container3(title: "Ice Cream & \n Much More",imagePath: "lib/assets/images/image 24.png",),
+                ],
+              ),
+            ),
+            SizedBox(height: 10,),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Text(
+                "Snacks & Drinks ",
+                style: TextStyle(fontWeight: FontWeight.w700),
+              ),
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Container3(title: "Chips & \n Namkeens",imagePath: "lib/assets/images/image 32.png",),
+                  Container3(title: "Sweets & \n Chocolates",imagePath: "lib/assets/images/image 33.png",),
+                  Container3(title: "Beauty & \n Cosmetics",imagePath: "lib/assets/images/image 34.png",),
+                  Container3(title: "Dairy Bread & \n Milk",imagePath: "lib/assets/images/image 35.png",),
+                ],
+              ),
+            ),
+
+      
           ],
         ),
       ),
     );
+
   }
 }

@@ -56,7 +56,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => BottomBar(),));
               },
                 child: Text("or login with phone number",style: TextStyle(color: Color(0xff269237,),fontWeight: FontWeight.w500),)),
-          ],
+
+         ],
         ),
       ),
     );
